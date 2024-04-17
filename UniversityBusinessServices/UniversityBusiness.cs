@@ -5,7 +5,7 @@ namespace UniversityBusinessService
 {
     public class UniversityService
     {
-        private UniversityData universityData;
+        public UniversityData universityData;
 
         public UniversityService()
         {
@@ -13,9 +13,9 @@ namespace UniversityBusinessService
         }
 
         //display method
-        public string GetUniversityData()
+        public List<University> GetUniversities()
         {
-            return universityData.DisplayUniversities();
+            return universityData.GetUniversities();
         }
 
         //search method
@@ -32,6 +32,28 @@ namespace UniversityBusinessService
                 }
             }
             return foundUniversity;
+        }
+
+        public List<University> SortUniversities(string sortBy)
+        {
+            var universities = universityData.GetUniversities();
+
+            switch (sortBy.ToLower())
+            {
+                case "name":
+                    universities.Sort((u1, u2) => string.Compare(u1.name, u2.name));
+                    break;
+                case "location":
+                    universities.Sort((u1, u2) => string.Compare(u1.location, u2.location));
+                    break;
+                case "type":
+                    universities.Sort((u1, u2) => string.Compare(u1.type, u2.type));
+                    break;
+                default:
+                    throw new ArgumentException("Invalid sorting criteria.");
+            }
+
+            return universities;
         }
 
     }

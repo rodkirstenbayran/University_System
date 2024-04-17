@@ -18,7 +18,7 @@ namespace UniversityDataService
                 name = "Polytechnic University of the Philippines",
                 location = "Binan, Laguna",
                 type = "State University",
-                courses = "BEED, BSA, BSBA-HRM, BSCpE, BSIE, BSIT, BSEDEN, BSEDSS, DCET, DICT"
+                courses = "Bachelor of Elementary Education, BSA, BSBA-HRM, BSCpE, BSIE, BSIT, BSEDEN, BSEDSS, DCET, DICT"
             };
 
             University university2 = new University
@@ -78,19 +78,9 @@ namespace UniversityDataService
             universities.Add(university7);
         }
 
-        public string DisplayUniversities()
+        public List<University>GetUniversities()
         {
-            string universityData = "";
-            foreach (var university in universities)
-            {
-                universityData += $"\nName: {university.name}\n";
-                universityData += $"    - Location: {university.location}\n";
-                universityData += $"    - Type: {university.type}\n";
-                universityData += $"    - Courses: {university.courses}\n\n";
-            }
-            return universityData;
-
+            return universities;
         }
-
     }
-}
+    }
