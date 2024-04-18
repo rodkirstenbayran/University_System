@@ -34,7 +34,7 @@ namespace UniversityUISystem
                         break;
 
                     case "2":
-                        Console.Write("\nEnter the type of university to search for: ");
+                        Console.Write("\nEnter the type of university (state/private): ");
                         string typeToSearch = Console.ReadLine();
 
                         var foundUniversities = universityService.SearchUniversity(typeToSearch);
@@ -52,18 +52,25 @@ namespace UniversityUISystem
                         }
                         else
                         {
-                            Console.WriteLine("University of specified type not found.");
+                            Console.WriteLine("\nInvalid input.");
                             Console.WriteLine("---------------------------");
-
                         }
                         break;
 
                     case "3":
                         Console.Write("\nSort Universities by (name/location/type): ");
                         string sortBy = Console.ReadLine();
-                        DisplayUniversities(universityService.SortUniversities(sortBy));
-                        Console.WriteLine("\nUniversities sorted successfully!");
-                        Console.WriteLine("---------------------------");
+
+                        try
+                        {
+                            var sortedUniversities = universityService.SortUniversities(sortBy);
+                            DisplayUniversities(sortedUniversities); 
+                            Console.WriteLine("---------------------------");
+                        }
+
+                        catch (ArgumentException ex)
+{                           Console.WriteLine("\nError: " + ex.Message);
+                        }
                         break;
 
                     case "4":
@@ -71,7 +78,7 @@ namespace UniversityUISystem
                         return;
 
                     default:
-                        Console.WriteLine("Invalid choice.");
+                        Console.WriteLine("\nInvalid choice.");
                         break;
                 }
             }
@@ -90,12 +97,8 @@ namespace UniversityUISystem
                         Console.WriteLine($"        {course.Trim()}");
                     }
                 }
-
-
             }
-
         }
-
     }
 }
 
