@@ -18,7 +18,7 @@ namespace UniversityDataService
                 name = "Polytechnic University of the Philippines",
                 location = "Binan, Laguna",
                 type = "State University",
-                courses = "Bachelor of Elementary Education, BSA, BSBA-HRM, BSCpE, BSIE, BSIT, BSEDEN, BSEDSS, DCET, DICT"
+                courses = "Bachelor in Elementary Education, BS in Accountancy, BS in Business Administration major in Human Resource Management, BS in Computer Engineering, BS in Information Technology, Bachelor of Secondary Education major in English, Bachelor of Secondary Education major in Social Studies, Diploma in Computer Engineering Technology, Diploma in Information Communication Technology"
             };
 
             University university2 = new University
@@ -26,7 +26,7 @@ namespace UniversityDataService
                 name = "Saint Michael's College of Laguna",
                 location = "Binan, Laguna",
                 type = "Private University",
-                courses = "BSBA, BSIT, BSPsy, BEED, BSN, BSCrim"
+                courses = "Bachelor of Science in Business Administration, Bachelor of Secondary Education, Bachelor of Elementary Education, Bachelor of Science in Nursing, BS in Hospitality Management"
             };
 
             University university3 = new University
@@ -34,7 +34,7 @@ namespace UniversityDataService
                 name = "University of Perpetual Help System Laguna",
                 location = "Binan, Laguna",
                 type = "Private University",
-                courses = "BSN, BS-HRM, BSTM, BSA, BSBA, BSIT, BSPsy, BSBio, BSPharma, BEED"
+                courses = "BS in Nursing, BS in Business Administration major in Human Resource Management, BS in Tourism Management, BS in Accountancy, BS in Information Technology, BS in Psychology, BS in Biology, BS in Pharmacy, Bachelor in Elementary Education"
             };
 
             University university4 = new University
@@ -42,7 +42,7 @@ namespace UniversityDataService
                 name = "La Consolacion College",
                 location = "Binan, Laguna",
                 type = "Private University",
-                courses = "BS-HRM, BSTM, BSA, BSBA, BSIT, BSPsy, BEED, BSCS"
+                courses = "BS in Business Administration major in Human Resource Management, BS in Tourism Management, BS in Accountancy, BS in Information Technology, BS in Psychology , Bachelor in Elementary Education, BS in Computer Science"
             };
 
             University university5 = new University
@@ -50,7 +50,7 @@ namespace UniversityDataService
                 name = "AMA Computer University",
                 location = "Binan, Laguna",
                 type = "Private University",
-                courses = "BA in Economics, BA in English, BA in MassComm, BSA, BSCE, BSCS, BSIT,BAPsy"
+                courses = "BA in Economics, BA in English, BA in Mass Communication, BS in Accountancy, BS in Computer Engineering, BS in Computer Science, BS in Information Technology, BA in Psychology"
             };
 
             University university6 = new University
@@ -58,7 +58,7 @@ namespace UniversityDataService
                 name = "University of the Philippines",
                 location = "Los Banos, Laguna",
                 type = "State University",
-                courses = "BS in Agriculture, BS in Forestry, BSBio, BSChem, BS in Civil Engineering, BSCS, BS in Economics, AB in Sociology, BS in Nutrition"
+                courses = "BS in Agriculture, BS in Forestry, BS in Biology, BS in Chemistry, BS in Civil Engineering, BS in Computer Science, BS in Economics, AB in Sociology, BS in Nutrition"
             };
 
             University university7 = new University
@@ -66,9 +66,32 @@ namespace UniversityDataService
                 name = "Laguna State Polytechnic University",
                 location = "San Pablo, Laguna",
                 type = "State University",
-                courses = "BEED, BS-HRM, BSBA, BSA, BSCS, BSIT, BSCrim, BSPsy, BSBio, BS in Tourism, BS in Office Administration"
+                courses = "Bachelor in Elementary Education, BS in Business Administration major in Human Resource Management, BS in Accountancy, BS in Computer Science, BS in Information Technology, BS in Criminology, BS in Psychology, BS in Biology, BS in Tourism Management, BS in Office Administration"
             };
 
+            University university8 = new University
+            {
+                name = "The Lyceum of the Philippines",
+                location = "Calamba Laguna",
+                type = "Private University",
+                courses = "BS in Civil Engineering, BS in Business Administration, BS in Accountancy, BS in Computer Science, BS in Information Technology, BS in Criminology, BS in Psychology, BS in Biology, BS in Tourism Management, BS in Office Administration, BS in Entrepreneurship, BS in Legal Management, BS in Medical Technology"
+            };
+
+            University university9 = new University
+            {
+                name = "Laguna College",
+                location = "San Pablo, Laguna",
+                type = "Private University",
+                courses = "Bachelor in Elementary Education, BS in Business Administration major in Human Resource Management, BS in Accountancy, BS in Computer Science, BS in Information Technology, BS in Criminology, BS in Psychology, BS in Biology, BS in Tourism Management, BS in Office Administration, BS in Nursing, BS in Industrial Engineering, AB in English"
+            };
+
+            University university10 = new University
+            {
+                name = "San Pedro College of Business Administration",
+                location = "San Pedro, Laguna",
+                type = "Private University",
+                courses = "BSEd in English, BSEd in Mathematics, BS in Accountancy, BS in Computer Science, BS in Information Technology, BS in Hospitality Management, BS in Psychology, BS in Internal Auditing, BS in Tourism Management, BS in Business Administration major in Human Resource Management, BS in Industrial Engineering"
+            };
             universities.Add(university1);
             universities.Add(university2);
             universities.Add(university3);
@@ -76,6 +99,9 @@ namespace UniversityDataService
             universities.Add(university5);
             universities.Add(university6);
             universities.Add(university7);
+            universities.Add(university8);
+            universities.Add(university9);
+            universities.Add(university10);
         }
 
         public List<University>GetUniversities()
