@@ -10,9 +10,8 @@ namespace UniversityBusinessService
         public UniversityService()
         {
             universityData = new UniversityData();
-        }
+        }   
 
-        //display method
         public List<University> GetUniversities()
         {
             return universityData.GetUniversities();
@@ -34,27 +33,28 @@ namespace UniversityBusinessService
             return foundUniversity;
         }
 
+
         public List<University> SortUniversities(string sortBy)
         {
             var universities = universityData.GetUniversities();
+            var sortedUniversities = new List<University>(universities);
 
             switch (sortBy.ToLower())
             {
                 case "name":
-                    universities.Sort((u1, u2) => string.Compare(u1.name, u2.name));
+                    sortedUniversities.Sort((u1, u2) => string.Compare(u1.name, u2.name));
                     break;
                 case "location":
-                    universities.Sort((u1, u2) => string.Compare(u1.location, u2.location));
+                    sortedUniversities.Sort((u1, u2) => string.Compare(u1.location, u2.location));
                     break;
                 case "type":
-                    universities.Sort((u1, u2) => string.Compare(u1.type, u2.type));
+                    sortedUniversities.Sort((u1, u2) => string.Compare(u1.type, u2.type));
                     break;
                 default:
                     throw new ArgumentException("Invalid sorting criteria.");
             }
 
-            return universities;
+            return sortedUniversities;
         }
-
     }
 }

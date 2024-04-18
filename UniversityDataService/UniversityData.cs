@@ -92,6 +92,7 @@ namespace UniversityDataService
                 type = "Private University",
                 courses = "BSEd in English, BSEd in Mathematics, BS in Accountancy, BS in Computer Science, BS in Information Technology, BS in Hospitality Management, BS in Psychology, BS in Internal Auditing, BS in Tourism Management, BS in Business Administration major in Human Resource Management, BS in Industrial Engineering"
             };
+
             universities.Add(university1);
             universities.Add(university2);
             universities.Add(university3);
