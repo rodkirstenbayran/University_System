@@ -1,4 +1,4 @@
-﻿using UniversityBusinessService;
+using UniversityBusinessService;
 using UniversityModel;
 
 namespace UniversityUISystem
@@ -64,13 +64,13 @@ namespace UniversityUISystem
                         try
                         {
                             var sortedUniversities = universityService.SortUniversities(sortBy);
-                            DisplayUniversities(sortedUniversities); 
+                            DisplayUniversities(sortedUniversities);
                             Console.WriteLine("---------------------------");
                         }
 
                         catch (ArgumentException ex)
                         {
-{                           Console.WriteLine("\nError: " + ex.Message);
+                            Console.WriteLine("\nError: " + ex.Message);
                         }
                         break;
 
@@ -102,4 +102,3 @@ namespace UniversityUISystem
         }
     }
 }
-
