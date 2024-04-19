@@ -69,6 +69,7 @@ namespace UniversityUISystem
                         }
 
                         catch (ArgumentException ex)
+                        {
 {                           Console.WriteLine("\nError: " + ex.Message);
                         }
                         break;
