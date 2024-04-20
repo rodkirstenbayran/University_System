@@ -5,7 +5,7 @@ namespace UniversityBusinessService
 {
     public class UniversityService
     {
-        public UniversityData universityData;
+        private UniversityData universityData;
 
         public UniversityService()
         {
